@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public bool gameStart = false;
-    public float timeLeft;
+    public float timeMin;
+    public float timeMax;
+    private float timeLeft;
     public Text timerTxt;
 
     // Start is called before the first frame update
     void Start()
     {
         gameStart = true;
+        timeLeft = Random.Range(timeMin, timeMax);
     }
 
     // Update is called once per frame
